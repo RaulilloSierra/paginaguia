@@ -8,7 +8,11 @@
 
 html{
     font-size: 62.5%;
+    box-sizing: border-box;
 }
+*, *:before, *:after {
+    box-sizing: inherit;
+}  
 body{
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
@@ -56,6 +60,15 @@ h1.titulo span{
         flex-direction: row;
         justify-content: space-between;
     }
-
-    
 }
+.hero h2{
+    text-align: center;
+}
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    padding: 20px;
+}
+    
