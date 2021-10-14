@@ -31,13 +31,15 @@ h3 {
 h1, h2, h3 {
     text-align: center;
 }
-
+.boton:hover{
+    cursor: pointer;
+}
 .sombra{
     -webkit-box-shadow: -4px 16px 33px -7px rgba(120,118,120,1);
     -moz-box-shadow: -4px 16px 33px -7px rgba(120,118,120,1);
     box-shadow: -4px 16px 33px -7px rgba(120,118,120,1);
     background-color: var(--blanco);
-    padding: 2rem, 2rem;
+    padding: 2rem;
     border-radius: 1rem;
 }
 /* fin de los globales*/
@@ -53,7 +55,7 @@ h1.titulo span{
     font-weight: 700;
 }
 .contenedor{
-    max-width: 90rem;
+    max-width: 120rem;
     margin: 0 auto;
 }
 /* esto es un comentario */
@@ -69,6 +71,7 @@ h1.titulo span{
     border-radius: .5rem;
     width: 90%;
     text-align: center;
+    border: none;
 }
 
 @media (min-width: 480px){
@@ -78,6 +81,20 @@ h1.titulo span{
 }
 .NavBg{
     background-color: var(--secundario);
+}
+.flex{
+    display: flex;
+}
+.alinearDerecha{
+    justify-content: flex-end;
+}
+.w-100{
+    width: 100%;
+}
+@media (min-width: 768px){
+    .w-100{
+        width:auto;
+    }
 }
 .NavegacionPrincipal{
     
@@ -129,4 +146,82 @@ h1.titulo span{
 .ContenidoHero p {
     color: var(--blanco);
 }
-    
+@media (min-width:750px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+    } 
+} 
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio p{
+    line-height: 2;
+    text-align: center;
+}
+.servicio h3{
+    color: var(--secundario);
+    font-weight: normal;
+}
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.formulario{
+    background-color: var(--gris);
+    width: min(60rem, 100%);/*utilizar el valor mas pequeños*/
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 2rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+.ContenedorCampos{
+
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.campo input{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+.campo textarea{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
